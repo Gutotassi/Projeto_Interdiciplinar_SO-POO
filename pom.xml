@@ -41,6 +41,15 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.fxml</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -61,7 +70,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.example.projeto_interdiciplinar_sopoo/org.example.projeto_interdiciplinar_sopoo.HelloApplication
+                                org.example.projeto_interdiciplinar_sopoo/com.biblioteca.view.BibliotecaApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
@@ -69,6 +78,10 @@
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>
+
+                            <options>
+                                <option>-Dglass.gtk.version=2</option>
+                            </options>
                         </configuration>
                     </execution>
                 </executions>

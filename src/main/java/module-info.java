@@ -3,6 +3,8 @@ module org.example.projeto_interdiciplinar_sopoo {
     requires javafx.fxml;
 
 
-    opens org.example.projeto_interdiciplinar_sopoo to javafx.fxml;
-    exports org.example.projeto_interdiciplinar_sopoo;
+    opens com.biblioteca.view to javafx.fxml;
+    exports com.biblioteca.view;
+    exports com.biblioteca.simulation;
+    opens com.biblioteca.simulation to javafx.fxml;
 }
